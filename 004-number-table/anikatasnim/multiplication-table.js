@@ -48,7 +48,7 @@ function showError(num){
     errorMessage.classList.add("hidden")
 
     if (isNaN(num)) {
-       
+       cleantable();
         errorMessage.innerText = "Please enter a valid number!"
         errorMessage.classList.remove("hidden")
         errorMessage.classList.add('border-2', 'border-black','p-1');
@@ -56,6 +56,7 @@ function showError(num){
         return;
     }
     if (num < 0) {
+        cleantable();
         errorMessage.innerText = "Number must be positive"
         errorMessage.classList.remove("hidden")
         errorMessage.classList.add('border-2', 'border-black','p-1');
